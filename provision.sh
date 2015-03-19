@@ -33,7 +33,7 @@ cat >/etc/mercurial/hgrc <<-EOF
 		users = vagrant
 	EOF
 
-#set up home directory bas
+#set up vagrant home directory base
 mkdir ./adminScripts
 git clone https://github.com/getafixx/Admin-Scripts.sh ./adminScripts
 mv -v ./adminScripts/.* ./
