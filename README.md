@@ -9,15 +9,40 @@ Checks out the source code to /vagrant.
 
 Uses the ubuntu/trusty64 box
 
-it sets up rabbitmq, mercurial, zip, xsltproc, esl-erlang, git, apache 
+It sets up rabbitmq, mercurial, zip, xsltproc, esl-erlang, git, apache 
 
-it creates a new user for rabbitmq called test password test (this should be changed)
+It creates a new user for rabbitmq called test password test (this should be changed)
 
-it also sets up the vagrant home directory with my user scripts from https://github.com/getafixx/Admin-Scripts.sh
+It also sets up the vagrant home directory with my user scripts from https://github.com/getafixx/Admin-Scripts.sh
 
-To use
-------
-vagrant up (takes a while)
+## Install
 
-vagrant halt
+* Download and install [Vagrant](http://downloads.vagrantup.com/)
+* Download and install  [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* Clone the project ```git clone --recursive git@github.com:getafixx/vagrant-rabbitmq.git```
+* In the project dir run ```vagrant up```
 
+## Installed Services
+
+### RabbitMQ
+
+host: localhost  
+port: 5672  
+
+### RabbitMQ Web client
+
+url: http://localhost:15672/  
+username: test  
+password: test  
+
+## Vagrant basic commands
+
+* start box: ```vagrant up```
+* ssh into box: ```vagrant ssh```
+* shutdown box: ```vagrant halt```
+* suspend box: ```vagrant suspend``
+* destroy box: ```vagrant destroy```
+
+## Links: 
+-  [Vagrant](http://downloads.vagrantup.com/)
+-  [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
