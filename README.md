@@ -3,17 +3,17 @@ vagrant-rabbitmq
 
 Simple vagrant script for creating a development environment for rabbitmq queues as my windows machine will not work with rabbitmq.
 
-Based on https://github.com/mdevilliers/vagrant-rabbitmq-development-environment
+Based on [vagrant-rabbitmq-development-environment](https://github.com/mdevilliers/vagrant-rabbitmq-development-environment)
 
 Checks out the source code to /vagrant.
 
 Uses the ubuntu/trusty64 box
 
-It sets up rabbitmq, mercurial, zip, xsltproc, esl-erlang, git, apache 
+It sets up php 5.6, Apache 2.4.12, MySql 5.5.41, rabbitmq, mercurial, zip, xsltproc, esl-erlang, git
 
 It creates a new user for rabbitmq called test password test (this should be changed)
 
-It also sets up the vagrant home directory with my user scripts from https://github.com/getafixx/Admin-Scripts.sh
+It also sets up the vagrant home directory with my [user scripts](https://github.com/getafixx/Admin-Scripts.sh)
 
 ## Install
 
