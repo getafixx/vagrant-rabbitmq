@@ -7,8 +7,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
  
   # Configure network interface
-  config.vm.network "public_network", ip: "192.168.56.200"
-
+  config.vm.network "public_network", ip: "10.1.1.200"
+  
+  config.vm.hostname = "death.local"
   # port forwards
   config.vm.network :forwarded_port, guest: 80, host: 8080
   
@@ -19,8 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 15672, host: 15672
   
   #set up Root http folder
-  config.vm.synced_folder "./www/", "/vagrant/www"
-
+  config.vm.synced_folder "./www/", "/vagrant/www" , owner:     "www-data", group: "www-data"
 
   #provision machine
   config.vm.provision 'shell', path: 'provision.sh'
